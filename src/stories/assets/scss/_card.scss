@@ -1,0 +1,12 @@
+@import './mixins';
+@import './color';
+
+// Card
+.uk-card{
+    @include global_gradient;
+    @include global_shadow;
+    @include global-radius;
+    border: 1px solid $grey_blue_40;
+    color: $white;
+    padding: 20px;
+  }

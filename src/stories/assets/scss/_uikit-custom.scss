@@ -1,0 +1,59 @@
+// Dashboard
+.uk-border-bottom {
+  border-bottom: solid 1px $grey_blue_80;
+}
+.uk-border-dashed-right-after {
+  position: relative;
+    &:after {
+    content: "";
+    border: dashed 1px $grey_blue_80;
+    height:100%;
+    position: absolute;
+    right: -5px;
+    top: 0;
+  }
+}
+.font-40 {
+  font-size: 40px !important; 
+}
+.uk-chart-shadow {
+  @include shadow-chart-donut;
+}
+.form_select_input__multi-value--is-disabled {
+  .form_select_input__multi-value__label {
+    padding: 2px 6px 4px 6px !important;
+  }
+}
+// recharts-brush
+.recharts-brush {
+  > rect {
+    fill-opacity: 1;
+    fill: #363F44
+  }
+}
+.recharts-brush-slide {
+  fill: #1A1C1F !important;
+}
+.recharts-brush-traveller {
+  > rect {
+    fill: #46535A;
+  }
+}
+.recharts-brush-texts {
+  > text {
+    fill: $white;
+  }
+}
+
+// Responsive
+@media (min-width: 640px) {
+  .uk-margin-remove-top\@s {
+    margin-top: 0px !important;
+  }
+  .uk-margin-remove-bottom\@s {
+    margin-bottom: 0px !important;
+  }
+  .uk-margin-small-left\@s {
+    margin-left: 10px !important;
+  }
+}

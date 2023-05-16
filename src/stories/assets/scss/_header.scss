@@ -1,0 +1,36 @@
+// Header
+.dark-header {
+    background: $header_bg;
+    @include header_elevation;
+}
+.uk-navbar-toggle {
+    width: 40px;
+    height: 40px;
+    min-height: auto;
+    @include easing;
+    @include radius-100;
+    background: $grey_blue_10;
+    margin-top: 10px !important;
+    margin-left: 15px !important;
+    margin-right: 15px;
+    &:hover {
+      background: $grey_blue_30;
+    }
+    i {
+      @include easing;
+      transform: rotate(180deg);
+      left: -1px;
+      font-size: 28px;
+      position: relative;
+    }
+  }
+  .uk-logo {
+    @include easing;
+    background: transparent center center;
+    background-size: 10%;
+    margin-left: 0px;
+    img {
+      @include easing;
+      width: 108px;
+    }
+  }

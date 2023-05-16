@@ -1,0 +1,141 @@
+//Dropdown
+.uk-dropdown {
+    @include global_gradient;
+    @include global_shadow;
+    @include global-radius;
+    border: 1px solid $grey_blue_40;
+    color: $white;
+    padding: 20px;
+}
+
+// Dropdown Submenu
+.uk-dropdown {
+    padding: 20px 10px;
+    .uk-navbar-dropdown-nav {
+        > li {
+            > a {
+                padding-left: 10px;
+                padding-right: 10px;
+                @include easing;
+                @include global-radius;
+            }
+            .uk-dropdown-submenu {
+                max-height: 155px;
+                overflow-y: auto;
+                
+                > li {
+                    > a {
+                        padding: 5px 10px 5px 30px;
+                        background-color: rgba($white, 0.05);
+                        position: relative;
+                        
+                        .icn-check {
+                            position: absolute;
+                            left: 9px;
+                            top: 7px;
+                            display: none;
+                            font-size: 16px;
+                        }
+                    }
+                    
+                    &:last-child {
+                        > a { border-radius: 0px 0px 8px 8px; }
+                    }
+                    
+                    &.active {
+                        > a {
+                            color: $blue_80;
+                            background-color: rgba($white, 0.1);
+                
+                            .icn-check {
+                                display: block;
+                                color: $blue_80;
+                            }
+                        }
+                    }
+
+                    ul {
+                        max-height: 155px;
+                        overflow-y: auto;
+                        li {
+                            a {
+                                padding-left: 50px;
+                                .icn-check { left: 29px; }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.dropdown-item, &.dropdown-item-sub {
+                > a {
+                    .jera-arrow-down-1 {
+                        transform:translateY(-50%)rotate(90deg);
+                        opacity: 0.5;
+                        @include easing;
+                        transform-origin: center center;
+                        position: relative;
+                        top: 7px;
+                    }
+                }
+                &.active {
+                    > a {
+                        border-radius: 8px 8px 0px 0px;
+                        .jera-arrow-down-1 {
+                            transform:translateY(-50%)rotate(0deg);
+                        }
+                    }
+                }
+            }
+            &.dropdown-item-sub {
+                > a {
+                    span {
+                        width: calc(100% - 18px);
+                    }
+                }
+            }
+        }
+        .dropdown-item-sub {
+            > a {
+                .jera-arrow-down-1 {
+                    transform:translateY(-50%)rotate(90deg);
+                    opacity: 0.5;
+                    @include easing;
+                    transform-origin: center center;
+                    position: relative;
+                    top: 7px;
+                }
+            }
+            &.active {
+                > a {
+                    border-radius: 8px 8px 0px 0px;
+                    background: rgba(255, 255, 255, 0.05) !important;
+                    .jera-arrow-down-1 {
+                        transform:translateY(-50%)rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+}
+.uk-navbar-dropdown-nav {
+    > li {
+      > a {
+        color: $grey_blue_95 !important;
+        @include easing;
+        &:hover {
+          color: $blue_80 !important;
+        }
+      }
+    }
+  }
+.uk-nav{
+    a.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        color: $white !important;
+        &:hover{
+            color: $white !important;
+        }
+    }
+}

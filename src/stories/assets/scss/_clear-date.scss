@@ -1,0 +1,49 @@
+// For static
+.uk-clear-date{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    
+    &:after{
+      content: " ";
+      width: 1px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      background-color: $grey_blue_40;
+    }
+  }
+  
+  // for react
+  .customPickerInput{
+      .icn {
+        right: 10px;
+      }
+      .react-datepicker__close-icon{
+        right: 40px;
+        &:after {
+          content: "\e9e6";
+          background-color: transparent;
+          font-family: 'jeraIcon' !important;
+          font-size: 20px;
+        }
+        &:before{
+          content: " ";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 20px;
+          background-color: $grey_blue_40;
+        }
+      }
+    }

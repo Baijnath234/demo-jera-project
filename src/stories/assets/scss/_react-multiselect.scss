@@ -1,0 +1,73 @@
+// React multi select 
+ .basic-multi-select{
+	.select__control{
+		background: $color_input_focus;
+		border: 1px solid $grey_blue_40;
+		box-sizing: border-box;
+		box-shadow: 10px 10px 25px rgba(16, 16,18, .50), -7px -7px 25px #262e32;
+		border-radius: 8px;
+		.select__value-containe{
+			.select__multi-value{
+				background: $blue_90;
+				border-radius: 6px;
+				justify-content: space-between;
+				padding: 0px 0px 0px 5px;
+				display: flex;
+				align-items: center;
+				margin: 2px 3px;
+				.select__multi-value__label{
+					    font-style: normal;
+						font-weight: normal;
+						font-size: 12px;
+						line-height: initial;
+						display: flex;
+						align-items: center;
+						letter-spacing: 0.1px;
+						text-transform: capitalize;
+						color: $blue_30;
+						padding: 0px;
+				}
+				.select__multi-value__remove{
+					color:$blue_30 !important;
+					:hover{
+						background-color: transparent !important;
+						color:$blue_30 !important;
+					}
+					svg{
+						height: 20px;
+						width: 20px;
+						fill: $blue_30 !important;
+					}
+				}
+			}
+		}
+		.select__indicators{
+			.select__indicator{
+				svg{
+					color: $white;
+					fill: $white;
+				}
+			}
+			.select__indicator-separator{
+				background-color: $grey_blue_40 !important;
+				margin-bottom: 9px !important;
+				margin-top: 9px !important;
+			}
+		}
+	}
+}
+.select--is-disabled{
+	.select__control.select__control--is-disabled{
+		background: $tuna;
+		border: 1px solid $grey_blue_40;
+		box-sizing: border-box;
+		border-radius: 8px;
+		.select__placeholder{
+			color:$white !important;
+		}
+		.select__indicator{
+			color: $grey_primary;
+		}
+	}
+}
+// React multi select  end
