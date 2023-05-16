@@ -1,0 +1,318 @@
+@import './color';
+@import './mixins';
+@import './variables';
+
+
+// button scss start
+.uk-button{
+    padding: 7px $heading_h2;
+    line-height: 1;
+    font-size: $paragraph_1;
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    border-radius: 30px;
+    min-height: 40px;
+    border: 0px;
+    text-transform: none;
+    // min-width: 128px;
+    justify-content: center;
+    white-space: nowrap;
+    i {
+      font-size: 20px;
+      margin-right: 7px;
+      margin-left: -5px;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  .uk-button-primary, .uk-button-orange, .uk-button-success, .uk-button-danger, .uk-button-grey {
+    background: linear-gradient(274.22deg, $blue_40 0.81%, $blue_70 96.42%);  
+    background-color: $blue_70;
+    color: $white !important;
+    position: relative;
+    z-index: 1; 
+    i{
+      color: $white;
+    }
+    &::before{
+      @include after_before;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      background: linear-gradient(274.22deg, $blue_70 0.81%, $blue_40 96.42%);
+      background-color: $blue_70;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      z-index: -1;
+      border-radius: 30px;
+    }
+    &:hover{ 
+      background: linear-gradient(274.22deg, $blue_70 0.81%, $blue_40 96.42%);
+      color: $white !important;
+      &::before{
+        background: linear-gradient(274.22deg, $blue_40 0.81%, $blue_70 96.42%); 
+      }
+    }
+    &:disabled {
+      background: linear-gradient(274.22deg, $blue_40 0.81%, $blue_70 96.42%) !important;  
+      &::before{
+        background: linear-gradient(274.22deg, $blue_70 0.81%, $blue_40 96.42%) !important;
+      }
+    }
+    &.uk-button-rectangle {
+      &:disabled {
+        background: linear-gradient(274.22deg, $blue_40 0.81%, $blue_70 96.42%) !important;
+        &::before{
+          background: unset !important;
+        }
+      }
+    }
+  }
+  .uk-button-default{
+    background-color: $grey_blue_30 !important;
+    color: $white !important;
+    position: relative;
+    z-index: 1; 
+    i{
+      color: $white;
+    }
+    &::before{
+      @include after_before;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      background-color: $grey_blue_20;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      z-index: -1;
+      border-radius: 30px;
+    }
+    &:hover{ 
+      background-color: $grey_blue_20 !important;
+      color: $white !important;
+      &::before{
+        background-color: $grey_blue_30;
+      }
+    }
+    &:disabled {
+      background-color: $grey_blue_30 !important;  
+      &::before{
+        background-color: $grey_blue_20 !important;
+      }
+    }
+    &.uk-button-rectangle {
+      &:disabled {
+        background-color: $grey_blue_30 !important;
+        &::before{
+          background: unset !important;
+        }
+      }
+    }
+  }
+  .uk-button-orange {
+    background: linear-gradient(274.22deg, $orange_40 0.81%, $orange_70 96.42%);  
+    background-color: $orange_70;
+    &::before{
+      background: linear-gradient(274.22deg, $orange_70 0.81%, $orange_40 96.42%);
+      background-color: $orange_70;
+    }
+    &:hover{ 
+      background: linear-gradient(274.22deg, $orange_70 0.81%, $orange_40 96.42%);
+      color: $white !important;
+      &::before{
+        background: linear-gradient(274.22deg, $orange_40 0.81%, $orange_70 96.42%); 
+      }
+    }
+    &:disabled {
+      background: linear-gradient(274.22deg, $orange_40 0.81%, $orange_70 96.42%) !important;  
+      &::before{
+        background: linear-gradient(274.22deg, $orange_70 0.81%, $orange_40 96.42%) !important;
+      }
+    }
+    &.uk-button-rectangle {
+      &:disabled {
+        background: linear-gradient(274.22deg, $orange_40 0.81%, $orange_70 96.42%) !important; 
+        &::before{
+          background: unset !important;
+        }
+      }
+    }
+  }
+  .uk-button-success {
+    background: linear-gradient(274.22deg, $green_40 0.81%, $green_80 96.42%);  
+    background-color: $green_80;
+    &::before{
+      background: linear-gradient(274.22deg, $green_80 0.81%, $green_40 96.42%);
+      background-color: $green_80;
+    }
+    &:hover{ 
+      background: linear-gradient(274.22deg, $green_80 0.81%, $green_40 96.42%);
+      color: $white !important;
+      &::before{
+        background: linear-gradient(274.22deg, $green_40 0.81%, $green_80 96.42%); 
+      }
+    }
+    &:disabled {
+      background: linear-gradient(274.22deg, $green_40 0.81%, $green_80 96.42%) !important;  
+      &::before{
+        background: linear-gradient(274.22deg, $green_80 0.81%, $green_40 96.42%) !important;
+      }
+    }
+    &.uk-button-rectangle {
+      &:disabled {
+        background: linear-gradient(274.22deg, $green_40 0.81%, $green_80 96.42%) !important;
+        &::before{
+          background: unset !important;
+        }
+      }
+    }
+  }
+  .uk-button-danger {
+    background: linear-gradient(274.22deg, $red_60 0.81%, $red_80 96.42%);  
+    background-color: $red_80;
+    &::before{
+      background: linear-gradient(274.22deg, $red_80 0.81%, $red_60 96.42%);
+      background-color: $red_80;
+    }
+    &:hover{ 
+      background: linear-gradient(274.22deg, $red_80 0.81%, $red_60 96.42%);
+      color: $white !important;
+      &::before{
+        background: linear-gradient(274.22deg, $red_60 0.81%, $red_80 96.42%); 
+      }
+    }
+    &:disabled {
+      background: linear-gradient(274.22deg, $red_60 0.81%, $red_80 96.42%) !important;  
+      &::before{
+        background: linear-gradient(274.22deg, $red_80 0.81%, $red_60 96.42%) !important;
+      }
+    }
+    &.uk-button-rectangle {
+      &:disabled {
+        background: linear-gradient(274.22deg, $red_60 0.81%, $red_80 96.42%) !important;  
+        &::before{
+          background: unset !important;
+        }
+      }
+    }
+  }
+  .uk-button-grey {
+    background: linear-gradient(103.29deg, $grey_blue_70 10.03%, $grey_blue_40 90.92%);
+    &:before{
+      background: linear-gradient(314.86deg, $grey_blue_70 0%, $grey_blue_40 100%);
+    }
+    &:hover{
+      background: linear-gradient(103.29deg, $grey_blue_40 10.03%, $grey_blue_70 90.92%);
+      &:before{
+        background: linear-gradient(314.86deg, $grey_blue_40 0%, $grey_blue_70 100%);
+      }
+    }
+    &:disabled {
+      background: linear-gradient(103.29deg, $grey_blue_70 10.03%, $grey_blue_40 90.92%) !important;
+      &:before{
+        background: linear-gradient(314.86deg, $grey_blue_70 0%, $grey_blue_40 100%) !important;
+      }
+    }
+  }
+  .uk-button-outline {
+    padding: 5px 9px;
+    min-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 20px;
+    }
+    span {
+      margin-left: 5px;
+    }
+    &.filled {
+      background: $grey_blue_20 !important;
+      &:hover {
+        background: $grey_blue_30 !important;
+      }
+    }
+  }
+  .uk-button-rectangle {
+    padding: 0 10px;
+    border-radius: 8px;
+    min-width: auto;
+    &:before {
+      border-radius: 8px;
+      background-color: unset;
+      background: unset;
+    }
+  }
+  .uk-button-outline {
+    color: $white !important;
+  }
+  .uk-button-large {
+    min-height: 50px;
+    font-size: 18px;
+  }
+  .uk-button-sm {
+    min-height: 26px;
+    min-width: 90px;
+  }
+  .uk-button-small{
+    min-height: 30px;
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+  .btn-shadow {
+    @include btn_elevation;
+    @include btn_elevation_diff;
+  }
+  .btn-feedback {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    &:after {
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(15, 13, 13, 0);
+        border-width: 7px;
+        top: 100%;
+        left: 50%;
+        border-top-color: $orange_60;
+        margin-left: -7px;
+    }
+  }
+.btn-40 {
+    width: 40px;
+    height: 40px;
+    @include radius-100;
+  }
+  .btn-dark {
+    background: $grey_blue_10;
+    &:hover {
+      background: $grey_blue_30;
+    }
+  }
+  // Upload button
+.btn-upload {
+  position: relative;
+  overflow: hidden;
+  input {
+    position: absolute;
+    padding-left: 110%;
+    left: 0;
+    top: 0;
+    height: 40px;
+    z-index: 99;
+    cursor: pointer;
+  }
+}
+// Upload button end
+// button scss end

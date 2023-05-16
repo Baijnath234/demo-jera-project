@@ -1,0 +1,23 @@
+# This workflow will triage pull requests and issues and apply a label based on the
+# keywords or substrings in the title or body of the pull requests and issues.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/jimschubert/labeler-action
+
+name: Labeler
+on: [issues, pull_request_target]
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Apply labels
+        id: labeler
+        uses: jimschubert/labeler-action@v2
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

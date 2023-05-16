@@ -1,0 +1,114 @@
+.uk-accordion{
+    li{
+      @include global_gradient;
+      @include global_shadow;
+      @include global-radius;
+      border: 1px solid $grey_blue_40;
+      color: $white;
+      padding: 17px 15px;
+  
+      .uk-accordion-title{
+        &:hover{
+          color: $white!important;
+        }
+        &:before{
+          content: "\e932";
+          font-family: 'jeraIcon';
+          background-image: none;
+          font-size: 20px;
+          margin-left: 10px;
+          color: $white;
+          // background-image: url(../../src/assets/images/icn-arrow-circle-right.svg);
+        }
+      }
+      &.uk-open{
+        border: 2px solid $blue_60;
+        &>.uk-accordion-title{
+          &:before{
+            content: "\e930";
+            background-image: none;
+            color: $blue_70;
+            // background-image: url(../../src/assets/images/icn-arrow-circle-down.svg);
+          }
+        }
+      }
+      .uk-accordion-content{
+        box-shadow: inset 0px 1px 0px $grey_blue_30;
+        padding-top: 10px;
+      }
+    }
+  }
+
+//   Without border
+.uk-accordion-without-border {
+    li {
+      border: 1px solid $grey_blue_30 !important;
+      &.uk-open {
+        border: 1px solid $grey_blue_30!important;
+        .uk-accordion-title{
+          .uk-accordion-sub-header{
+            color: $blue_70 !important;
+          }
+        }
+      }
+      .uk-accordion-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &::before{
+          position: absolute;
+          right: 0px;
+        }
+        .uk-accordion-sub-header{
+          margin-right: 35px;
+          color: $grey_blue_90;
+        }
+        
+      }
+    }
+    .height-50 {
+      height: 50px !important;
+    }
+  }
+
+//   with left side icon
+.uk-accordion-expand-left{
+    li{
+        padding: 20px 0;
+        .uk-accordion-title{
+            justify-content: flex-start;
+            padding: 0 20px;
+            &:before {
+                content: "\e93d";
+                font-family: 'jeraIcon' !important;
+                background-image: none;
+                margin-left: 0px;
+                float: left;
+                margin-right: 10px;
+                font-size: 20px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                position: relative;
+              }
+        }
+        .uk-accordion-content{
+            padding: 12px 20px 0;
+            margin-top: 12px;
+        }
+        &.uk-open {
+    
+          &>.uk-accordion-title {
+            &:before {
+              content: "\e934";
+              background-image: none;
+              color: $white;
+            }
+          }
+        }
+    }
+}
+.box-shadow-remove {
+  box-shadow: none !important;
+}

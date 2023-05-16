@@ -1,0 +1,100 @@
+@import 'color';
+@import 'mixins';
+@import 'typography';
+@import 'uikit-custom';
+
+@import 'accordion';
+@import 'button';
+@import 'card';
+@import 'clear-date';
+@import 'dropdown';
+@import 'form-element';
+@import 'header';
+@import 'react-dateTime-picker';
+@import 'react-multiselect';
+@import 'react-select';
+@import 'react-year-picker';
+@import 'sidebar';
+@import 'tabs';
+@import 'tooltip';
+
+*, ::after, ::before {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: $white!important;
+  }
+  
+  html, .dark-body {
+    background: linear-gradient(0deg, $armadillo 0%, $tuna 100%);
+  }
+  h1 {
+    @include heading_h1;
+  }
+  
+  h2 {
+    @include heading_h2;
+  }
+  
+  h3 {
+    @include heading_h3;
+  }
+  
+  h4 {
+    @include heading_h4;
+  }
+  
+  h5 {
+    @include heading_h5;
+  }
+  
+  h6 {
+    @include heading_h6;
+  }
+  
+  .jera {
+    font-size: $heading_h2;
+  }
+  a {
+    text-decoration: none !important;
+    @include easing;
+    &:hover {
+      color: $blue_80 !important;
+    }
+  }
+  .c-tab-vertical {
+    display: flex;
+
+    > .uk-tab {
+        display: flex;
+        flex-direction: column;
+        width: 20%;    
+        margin-right: 30px;
+
+        li {
+            a { justify-content: flex-start; }
+        }
+    }
+    > #my-id { width: 80%; }
+}
+pre{
+  padding: 0!important;
+  code{
+    padding: 0!important;
+    background: $white!important;
+    margin:-20px 0 -40px -140px;
+  }
+}
+.color-red-60{
+  color: $red_60;
+}
+.color-white{
+  color: $white;
+}
+.top-0{
+  top: 0!important;
+}

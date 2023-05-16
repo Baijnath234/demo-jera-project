@@ -1,0 +1,69 @@
+@import './mixins';
+@import './color';
+@import './uikit-custom';
+// UK Tabs start
+.uk-tab {
+    background-color: $grey_blue_10;
+    border-radius: 30px;
+    margin-left: 0;
+    display: inline-block;
+    margin: 0px;
+    padding: 0%;
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        padding: 10px;
+    }
+    >*{
+      padding-left: 0;
+    }
+    &::before{
+      border-bottom: none;
+      border-color: transparent;
+    }
+    a {
+      color: $white;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 7px 40px;
+      text-transform: none;
+      min-height: 40px;
+    }
+  }
+    .uk-tab{
+      >.uk-active{
+        background: linear-gradient(274.22deg, $blue_40 0.81%, $blue_70 96.42%);  
+        background-color: $blue_70;
+        color: $white !important;
+        position: relative;
+        z-index: 1;
+        border-radius: 30px;
+          &::before{
+            @include after_before;
+            content: '';
+            display: block;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background: linear-gradient(274.22deg, $blue_70 0.81%, $blue_40 96.42%);
+            background-color: $blue_70;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            z-index: -1;
+            border-radius: 30px;
+          }
+        > a{
+          border-color: transparent;
+          cursor: pointer;
+          &:hover {
+            color: $white !important;
+          }
+        }
+      }
+    }
+    
+  .Child{
+    padding: 15px;
+  }
+  // UK Tabs end here

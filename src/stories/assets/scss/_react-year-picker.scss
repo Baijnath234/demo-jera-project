@@ -1,0 +1,79 @@
+//React Year picker
+.react-datepicker-popper {
+    z-index: 2 !important;
+  }
+  .react-datepicker__year--container {
+    background: $color_input_focus !important;
+    border-radius: 8px !important;
+    }
+  .react-datepicker-popper .react-datepicker {
+      background: $color_input_focus;
+  }
+    .react-datepicker {
+      border: 1px solid $grey_blue_40;
+      background: $color_input_focus !important;
+      color: $white !important;
+      border-radius: 8px !important;
+    }
+    .react-datepicker__input-container input {
+      height: 40px;
+      color: $white;
+      background-image: url(../../src/assets/images/icn-down-arrow.svg) !important;
+      background-position: right 10px top 50% !important;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      outline: 0px !important;
+      width: 100%;
+      padding-top: 2px;
+      margin-top: 1px;
+    }
+    .react-datepicker-year-header {
+      border-radius: 8px 8px 0px 0px !important;
+    }
+    .react-datepicker-year-header, .react-datepicker__year {
+    background:  $color_input_focus !important;
+    color: $white !important;
+    }
+    .react-datepicker__navigation {
+    color: $white;
+    }
+    .react-datepicker__navigation-icon::before {
+    top: 13px !important;
+    }
+    .react-datepicker__year-text:hover {
+      background: rgba($white, 0.1) !important;
+      border-radius: 4px !important;
+    }
+    .react-datepicker__year-text--today {
+      background: $blue_30 !important;
+      border-radius: 4px !important;
+      &:hover {
+        background: $blue_30 !important;
+      }
+    }
+    .react-datepicker__year-text--selected {
+      background: $blue_70 !important;
+      &:hover {
+        background: $blue_70 !important;
+      }
+    }
+    .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
+    border-bottom-color: $grey_blue_40 !important;
+    }
+    .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
+      display: none;
+    }
+    .react-datepicker__year-wrapper {
+      display: block !important;
+    }
+    .no-icon .react-datepicker__input-container input {
+      background-image: none !important;
+    }
+    .react-datepicker-popper[data-placement^=top] {
+      .react-datepicker__triangle {
+        &:after {
+          display:none !important;  
+        }
+      }
+    }
+  //React Year picker end
